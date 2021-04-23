@@ -1,0 +1,71 @@
+{
+  "version": 8,
+  "name": "OpenStreetMap Mapnik raster tiles (India)",
+  "metadata": {
+    "mapbox:autocomposite": true
+  },
+  "bounds": [66, 7, 99, 37],
+  "center": [82, 23],
+  "zoom": 3.7,
+  "glyphs": "https://raw.githubusercontent.com/orangemug/font-glyphs/gh-pages/glyphs/{fontstack}/{range}.pbf",
+  "sources": {
+    "osm-mapnik": {
+      "type": "raster",
+      "tiles": ["https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"],
+      "tileSize": 256,
+      "attribution": "Basemap data <a href='https://www.osm.org' target=_blank>©  OpenStreetMap contributors</a>"
+    },
+    "adm0-disputed-lines-IN": {
+      "type": "geojson",
+      "data": "https://raw.githubusercontent.com/osm-in/mapbox-gl-styles/master/data/osm-india-adm0-disputed-lines.geojson"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "rgba(0,0,0,0)"
+      }
+    },
+    {
+      "id": "osm-mapnik",
+      "type": "raster",
+      "source": "osm-mapnik"
+    },
+    {
+      "id": "disputed-IN",
+      "type": "line",
+      "source": "adm0-disputed-lines-IN",
+      "filter": ["all", ["all", ["in", "disputed_by", "IN"]]],
+      "paint": {
+        "line-color": "#f2efea",
+        "line-dasharray": [1, 0.5],
+        "line-opacity": 0.6,
+        "line-width": {
+          "stops": [
+            [3, 2],
+            [10, 6]
+          ]
+        }
+      }
+    },
+    {
+      "id": "claimed-IN",
+      "type": "line",
+      "source": "adm0-disputed-lines-IN",
+      "filter": ["all", ["all", ["in", "claimed_by", "IN"]]],
+      "paint": {
+        "line-color": "purple",
+        "line-opacity": 0.14,
+        "line-width": {
+          "stops": [
+            [3, 2],
+            [10, 6]
+          ]
+        }
+      }
+    }
+  ],
+  "owner": "OpenStreetMap India"
+}

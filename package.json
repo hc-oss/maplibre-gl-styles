@@ -1,0 +1,25 @@
+{
+  "name": "maplibre-gl-styles",
+  "version": "0.0.1",
+  "description": "ready to use mapbox/maplibre gl styles with disputed boundry support",
+  "author": "harshzalavadiya",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshzalavadiya/mapbox-gl-styles.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harshzalavadiya/mapbox-gl-styles/issues"
+  },
+  "homepage": "https://github.com/harshzalavadiya/mapbox-gl-styles#readme",
+  "keywords": [
+    "mapbox",
+    "mapbox-gl",
+    "maplibre",
+    "osm",
+    "openstreetmap",
+    "disputed",
+    "boundry",
+    "india"
+  ]
+}
