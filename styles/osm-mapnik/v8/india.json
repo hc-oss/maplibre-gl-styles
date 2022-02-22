@@ -17,7 +17,7 @@
     },
     "adm0-disputed-lines-IN": {
       "type": "geojson",
-      "data": "https://raw.githubusercontent.com/osm-in/mapbox-gl-styles/master/data/osm-india-adm0-disputed-lines.geojson"
+      "data": "https://raw.githubusercontent.com/hc-oss/maplibre-gl-styles/master/data/osm-india-adm0-disputed-lines.geojson"
     }
   },
   "layers": [
